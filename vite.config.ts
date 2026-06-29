@@ -1,6 +1,6 @@
 import { defineConfig } from "vite";
 import tailwindcss from "@tailwindcss/vite";
-import react from "@vitejs/plugin-react";
+import { reactRouter } from "@react-router/dev/vite";
 import { fileURLToPath } from "url";
 import AutoImport from "unplugin-auto-import/vite";
 
@@ -9,7 +9,7 @@ const host = process.env.TAURI_DEV_HOST;
 // https://vite.dev/config/
 export default defineConfig(async () => ({
   plugins: [
-    react(),
+    reactRouter(),
     tailwindcss(),
     AutoImport({
       include: [/\.[tj]sx?$/],

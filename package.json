@@ -4,18 +4,22 @@
   "version": "0.1.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "tsc && vite build",
+    "dev": "react-router dev",
+    "build": "tsc && react-router build",
     "preview": "vite preview",
     "tauri": "tauri"
   },
   "dependencies": {
     "@headlessui/react": "^2.2.10",
+    "@react-router/dev": "^8.0.1",
     "@react-router/fs-routes": "^8.0.1",
+    "@react-router/node": "^8.0.1",
     "@tauri-apps/api": "^2",
     "@tauri-apps/plugin-opener": "^2",
     "react": "^19.1.0",
-    "react-dom": "^19.1.0"
+    "react-dom": "^19.1.0",
+    "react-router": "^8.0.1",
+    "isbot": "^5"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
