@@ -13,7 +13,7 @@ export default defineConfig(async () => ({
     tailwindcss(),
     AutoImport({
       include: [/\.[tj]sx?$/],
-      imports: ["react"],
+      imports: ["react", "react-router"],
       dirs: [
         "src/composables",
         "src/components",

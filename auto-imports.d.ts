@@ -9,7 +9,14 @@ declare global {
   const Activity: typeof import('react').Activity
   const BaseButton: typeof import('./resources/js/shared/components/BaseButton').default
   const Fragment: typeof import('react').Fragment
+  const ImageSelector: typeof import('./src/components/ImageSelector').default
+  const Link: typeof import('react-router-dom').Link
   const MainSidebar: typeof import('./src/components/MainSidebar').default
+  const NavLink: typeof import('react-router-dom').NavLink
+  const Navigate: typeof import('react-router-dom').Navigate
+  const Outlet: typeof import('react-router-dom').Outlet
+  const Route: typeof import('react-router-dom').Route
+  const Routes: typeof import('react-router-dom').Routes
   const Suspense: typeof import('react').Suspense
   const ToolCard: typeof import('./src/components/ToolCard').default
   const cache: typeof import('react').cache
@@ -28,14 +35,26 @@ declare global {
   const useDeferredValue: typeof import('react').useDeferredValue
   const useEffect: typeof import('react').useEffect
   const useEffectEvent: typeof import('react').useEffectEvent
+  const useHref: typeof import('react-router').useHref
   const useId: typeof import('react').useId
   const useImperativeHandle: typeof import('react').useImperativeHandle
+  const useInRouterContext: typeof import('react-router').useInRouterContext
   const useInsertionEffect: typeof import('react').useInsertionEffect
   const useLayoutEffect: typeof import('react').useLayoutEffect
+  const useLinkClickHandler: typeof import('react-router-dom').useLinkClickHandler
+  const useLocation: typeof import('react-router').useLocation
   const useMemo: typeof import('react').useMemo
+  const useNavigate: typeof import('react-router').useNavigate
+  const useNavigationType: typeof import('react-router').useNavigationType
   const useOptimistic: typeof import('react').useOptimistic
+  const useOutlet: typeof import('react-router').useOutlet
+  const useOutletContext: typeof import('react-router').useOutletContext
+  const useParams: typeof import('react-router').useParams
   const useReducer: typeof import('react').useReducer
   const useRef: typeof import('react').useRef
+  const useResolvedPath: typeof import('react-router').useResolvedPath
+  const useRoutes: typeof import('react-router').useRoutes
+  const useSearchParams: typeof import('react-router-dom').useSearchParams
   const useState: typeof import('react').useState
   const useSyncExternalStore: typeof import('react').useSyncExternalStore
   const useTransition: typeof import('react').useTransition

@@ -14,7 +14,7 @@ type Pages = {
   "/": {
     params: {};
   };
-  "/about": {
+  "/passport-photo-generator": {
     params: {};
   };
 };
@@ -22,20 +22,20 @@ type Pages = {
 type RouteFiles = {
   "root.tsx": {
     id: "root";
-    page: "/" | "/about";
+    page: "/" | "/passport-photo-generator";
+  };
+  "routes/passport-photo-generator._index.tsx": {
+    id: "routes/passport-photo-generator._index";
+    page: "/passport-photo-generator";
   };
   "routes/_index.tsx": {
     id: "routes/_index";
     page: "/";
   };
-  "routes/about.tsx": {
-    id: "routes/about";
-    page: "/about";
-  };
 };
 
 type RouteModules = {
   "root": typeof import("./src/root.tsx");
+  "routes/passport-photo-generator._index": typeof import("./src/routes/passport-photo-generator._index.tsx");
   "routes/_index": typeof import("./src/routes/_index.tsx");
-  "routes/about": typeof import("./src/routes/about.tsx");
 };
