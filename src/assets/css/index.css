@@ -1,0 +1,192 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/forms";
+@plugin "@tailwindcss/typography";
+@plugin "@tailwindcss/aspect-ratio";
+@import "./token.css";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-headline: "Newsreader, serif";
+  --font-body: "Inter", -apple-system, system-ui, sans-serif;
+  --font-label: "Inter", -apple-system, system-ui, sans-serif;
+
+  /* ========================
+   * Primary Colors
+   * ======================== */
+  --color-primary: var(--md-sys-color-primary);
+  --color-on-primary: var(--md-sys-color-on-primary);
+  --color-primary-container: var(--md-sys-color-primary-container);
+  --color-on-primary-container: var(--md-sys-color-on-primary-container);
+  --color-surface-tint: var(--md-sys-color-surface-tint);
+
+  /* ========================
+   * Secondary Colors
+   * ======================== */
+  --color-secondary: var(--md-sys-color-secondary);
+  --color-on-secondary: var(--md-sys-color-on-secondary);
+  --color-secondary-container: var(--md-sys-color-secondary-container);
+  --color-on-secondary-container: var(--md-sys-color-on-secondary-container);
+
+  /* ========================
+   * Tertiary Colors
+   * ======================== */
+  --color-tertiary: var(--md-sys-color-tertiary);
+  --color-on-tertiary: var(--md-sys-color-on-tertiary);
+  --color-tertiary-container: var(--md-sys-color-tertiary-container);
+  --color-on-tertiary-container: var(--md-sys-color-on-tertiary-container);
+
+  /* ========================
+   * Error Colors
+   * ======================== */
+  --color-error: var(--md-sys-color-error);
+  --color-on-error: var(--md-sys-color-on-error);
+  --color-error-container: var(--md-sys-color-error-container);
+  --color-on-error-container: var(--md-sys-color-on-error-container);
+
+  /* ========================
+   * Background & Surface
+   * ======================== */
+  --color-background: var(--md-sys-color-background);
+  --color-on-background: var(--md-sys-color-on-background);
+  --color-surface: var(--md-sys-color-surface);
+  --color-on-surface: var(--md-sys-color-on-surface);
+  --color-surface-variant: var(--md-sys-color-surface-variant);
+  --color-on-surface-variant: var(--md-sys-color-on-surface-variant);
+
+  /* ========================
+   * Outline & Shadow
+   * ======================== */
+  --color-outline: var(--md-sys-color-outline);
+  --color-outline-variant: var(--md-sys-color-outline-variant);
+  --color-shadow: var(--md-sys-color-shadow);
+  --color-scrim: var(--md-sys-color-scrim);
+
+  /* ========================
+   * Inverse Colors
+   * ======================== */
+  --color-inverse-surface: var(--md-sys-color-inverse-surface);
+  --color-on-inverse-surface: var(--md-sys-color-on-inverse-surface);
+  --color-inverse-primary: var(--md-sys-color-inverse-primary);
+
+  /* ========================
+   * Primary Fixed Variants
+   * ======================== */
+  --color-primary-fixed: var(--md-sys-color-primary-fixed);
+  --color-on-primary-fixed: var(--md-sys-color-on-primary-fixed);
+  --color-primary-fixed-dim: var(--md-sys-color-primary-fixed-dim);
+  --color-on-primary-fixed-variant: var(
+    --md-sys-color-on-primary-fixed-variant
+  );
+
+  /* ========================
+   * Secondary Fixed Variants
+   * ======================== */
+  --color-secondary-fixed: var(--md-sys-color-secondary-fixed);
+  --color-on-secondary-fixed: var(--md-sys-color-on-secondary-fixed);
+  --color-secondary-fixed-dim: var(--md-sys-color-secondary-fixed-dim);
+  --color-on-secondary-fixed-variant: var(
+    --md-sys-color-on-secondary-fixed-variant
+  );
+
+  /* ========================
+   * Tertiary Fixed Variants
+   * ======================== */
+  --color-tertiary-fixed: var(--md-sys-color-tertiary-fixed);
+  --color-on-tertiary-fixed: var(--md-sys-color-on-tertiary-fixed);
+  --color-tertiary-fixed-dim: var(--md-sys-color-tertiary-fixed-dim);
+  --color-on-tertiary-fixed-variant: var(
+    --md-sys-color-on-tertiary-fixed-variant
+  );
+
+  /* ========================
+   * Surface Containers
+   * ======================== */
+  --color-surface-dim: var(--md-sys-color-surface-dim);
+  --color-surface-bright: var(--md-sys-color-surface-bright);
+  --color-surface-container-lowest: var(
+    --md-sys-color-surface-container-lowest
+  );
+  --color-surface-container-low: var(--md-sys-color-surface-container-low);
+  --color-surface-container: var(--md-sys-color-surface-container);
+  --color-surface-container-high: var(--md-sys-color-surface-container-high);
+  --color-surface-container-highest: var(
+    --md-sys-color-surface-container-highest
+  );
+
+  /* ========================
+   * Success Colors
+   * ======================== */
+  --color-success: var(--md-sys-color-success);
+  --color-on-success: var(--md-sys-color-on-success);
+  --color-success-container: var(--md-sys-color-success-container);
+  --color-on-success-container: var(--md-sys-color-on-success-container);
+}
+
+@layer base {
+  /* Global Scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: transparent;
+    border-radius: 4px;
+    border: 2px solid transparent;
+    background-clip: content-box;
+    transition: background-color 0.2s ease;
+  }
+
+  ::-webkit-scrollbar-thumb:hover,
+  ::-webkit-scrollbar-thumb:active {
+    background-color: var(--primary);
+  }
+
+  *:hover::-webkit-scrollbar-thumb {
+    background-color: var(--secondary);
+  }
+
+  *:hover::-webkit-scrollbar-thumb:hover,
+  *:hover::-webkit-scrollbar-thumb:active {
+    background-color: var(--primary);
+  }
+}
+
+button {
+  @apply cursor-pointer;
+}
+
+body {
+  @apply font-body bg-surface text-on-surface;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+label,
+.font-newsreader {
+  @apply font-headline;
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+    "FILL" 0,
+    "wght" 400,
+    "GRAD" 0,
+    "opsz" 24;
+}
+.fill-icon {
+  font-variation-settings:
+    "FILL" 1,
+    "wght" 400,
+    "GRAD" 0,
+    "opsz" 24;
+}
