@@ -9,7 +9,9 @@ declare global {
   const Activity: typeof import('react').Activity
   const BaseButton: typeof import('./resources/js/shared/components/BaseButton').default
   const Fragment: typeof import('react').Fragment
+  const MainSidebar: typeof import('./src/components/MainSidebar').default
   const Suspense: typeof import('react').Suspense
+  const ToolCard: typeof import('./src/components/ToolCard').default
   const cache: typeof import('react').cache
   const cacheSignal: typeof import('react').cacheSignal
   const createContext: typeof import('react').createContext

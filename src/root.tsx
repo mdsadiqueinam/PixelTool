@@ -12,7 +12,7 @@ export function Layout({ children }: { children: ReactNode }) {
         <Meta />
         <Links />
       </head>
-      <body className="min-h-screen bg-surface text-on-surface antialiased">
+      <body className="min-h-screen bg-surface text-on-surface antialiased flex flex-col">
         {children}
         <ScrollRestoration />
         <Scripts />

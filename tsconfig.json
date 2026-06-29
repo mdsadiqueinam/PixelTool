@@ -18,7 +18,12 @@
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true
+    "noFallthroughCasesInSwitch": true,
+    
+    "paths": {
+      "@/*": ["./src/*"],
+      "@shared/*": ["./resources/js/shared/*"]
+    }
   },
   "include": ["src", "auto-imports.d.ts"],
   "references": [{ "path": "./tsconfig.node.json" }]
