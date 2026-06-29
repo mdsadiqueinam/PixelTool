@@ -7,6 +7,7 @@
 export {}
 declare global {
   const Activity: typeof import('react').Activity
+  const BaseButton: typeof import('./resources/js/shared/components/BaseButton').default
   const Fragment: typeof import('react').Fragment
   const Suspense: typeof import('react').Suspense
   const cache: typeof import('react').cache

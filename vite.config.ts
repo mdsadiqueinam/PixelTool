@@ -16,8 +16,8 @@ export default defineConfig(async () => ({
       imports: ["react"],
       dirs: [
         "src/composables",
-        "resource/js/shared/composables",
-        "resource/js/shared/components",
+        "resources/js/shared/composables",
+        "resources/js/shared/components",
       ],
       dts: true,
     }),
